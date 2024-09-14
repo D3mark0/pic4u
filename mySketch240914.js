@@ -1,4 +1,4 @@
-console.log('v.240912')
+console.log('v.240914')
 
 const imgSize = [480,640];
 const expImgSize = [50,50];
@@ -213,13 +213,13 @@ function drawF6() {
 	textSize(params.fontSize).fill(255).noStroke().text("📥",width*0.75,height*0.90);
 	if (mouseIsPressed && mouseY>height*0.8) {
     if (mouseX<width*0.5) {
+      anim.yPos = height/2;
+      params.frame=8;
+    } else {
       // img_get.save('DSC'+pad(dsc,5)+'.JPG');
       img.get.save('DSC'+pad(random()*1000,5)+'.JPG');
       anim.yPos = 0;
       params.frame=7;
-    } else {
-      anim.yPos = height/2;
-      params.frame=8;
     }
     mouseIsPressed=false; 
   }
